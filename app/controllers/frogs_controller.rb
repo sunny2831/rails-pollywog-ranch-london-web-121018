@@ -18,7 +18,6 @@ class FrogsController < ApplicationController
 
   def create
     @frog = Frog.new(frog_params)
-
     respond_to do |format|
       if @frog.save
         format.html { redirect_to @frog, notice: 'Frog was successfully created.' }
